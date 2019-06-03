@@ -210,18 +210,18 @@ header ul li a {
   line-height: 2rem;
 }
 
-.section .box-portfolio .portfolio-item #visit-site {
+.section .box-portfolio .portfolio-item .visit-site {
   margin-left: auto;
 }
 
-.section .box-portfolio .portfolio-item #visit-site #visit-site-btn {
+.section .box-portfolio .portfolio-item .visit-site .visit-site-btn {
   border: 1px solid #b1aeae;
   color: #797676;
   padding: 10px;
   border-radius: 3px;
 }
 
-.section .box-portfolio .portfolio-item #visit-site #visit-site-btn:hover {
+.section .box-portfolio .portfolio-item .visit-site .visit-site-btn:hover {
   text-decoration: none;
   background-color: white;
   color: #3d3d3d;
@@ -270,6 +270,13 @@ footer .scrollTop:hover {
 }
 
 @media (min-width: 768px) {
+  .about-img {
+    width: 50%;
+    border-radius: 15pc;
+  }
+}
+
+@media (min-width: 1024px) {
   header {
     height: 7rem;
     width: 100%;
@@ -314,9 +321,9 @@ footer .scrollTop:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 45%;
+    bottom: 0;
     right: unset;
-    margin: 10px;
+    margin: 15px;
   }
   .contact i {
     padding: 1rem 2rem;

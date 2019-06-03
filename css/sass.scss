@@ -186,17 +186,17 @@ header {
             background-color: $port-box;
             line-height: 2rem;
 
-            #visit-site {
+            .visit-site {
                 margin-left: auto;
 
-                #visit-site-btn {
+                .visit-site-btn {
                     border: 1px solid $header-shd;
                     color: $nav-hover;
                     padding: 10px;
                     border-radius: 3px;
                 }
 
-                #visit-site-btn:hover {
+                .visit-site-btn:hover {
                     text-decoration: none;
                     background-color: $header-bg;
                     color: $body-clr;
@@ -240,12 +240,15 @@ footer {
 }
 
 // Tablet
-@media (min-width: 425px) {
-
+@media (min-width: 768px) {
+    .about-img {
+        width: 50%;
+        border-radius: 15pc;
+    }
 }
 
 // Laptop
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     header {
         height: 7rem;
         width: 100%;
@@ -286,9 +289,9 @@ footer {
 
     .contact {
         flex-direction: column;
-        top: 45%;
+        bottom: 0;
         right: unset;
-        margin: 10px;
+        margin: 15px;
 
         i {
             padding: 1rem 2rem;
