@@ -116,8 +116,8 @@ header {
 
 .section {
     padding-top: 3rem;
-    padding-bottom: 5rem;
-    border: 1px solid $img5-border;
+    // padding-bottom: 5rem;
+    // border: 1px solid $img5-border;
 
     #hello {
         background-color: $hello-bg;
@@ -237,6 +237,11 @@ footer {
         cursor: pointer;
         color: $nav-hover;
     }
+}
+
+// Tablet
+@media (min-width: 425px) {
+
 }
 
 // Laptop
