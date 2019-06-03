@@ -218,6 +218,7 @@ header {
     padding-bottom: 10rem;
 }
 
+
 footer {
     position: absolute;
     bottom: 0;
@@ -241,9 +242,25 @@ footer {
 
 // Tablet
 @media (min-width: 768px) {
-    .about-img {
-        width: 50%;
-        border-radius: 15pc;
+    .section {
+        .box-home {
+            .box {
+                .home-img {
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+
+        .box-about {
+            .box {
+                .about-img {
+                    width: 40%;
+                    border-radius: 10pc;
+                    margin: auto;
+                }
+            }
+        }
     }
 }
 

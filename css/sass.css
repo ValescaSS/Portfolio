@@ -270,9 +270,14 @@ footer .scrollTop:hover {
 }
 
 @media (min-width: 768px) {
-  .about-img {
-    width: 50%;
-    border-radius: 15pc;
+  .section .box-home .box .home-img {
+    width: 80%;
+    margin: auto;
+  }
+  .section .box-about .box .about-img {
+    width: 40%;
+    border-radius: 10pc;
+    margin: auto;
   }
 }
 
