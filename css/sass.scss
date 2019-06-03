@@ -182,12 +182,14 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             padding: 20px;
             background-color: $port-box;
             line-height: 2rem;
 
             .visit-site {
-                margin-left: auto;
+                // margin-left: auto;
+                margin: 20px;
 
                 .visit-site-btn {
                     border: 1px solid $header-shd;

@@ -209,13 +209,16 @@ header ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
   background-color: #ece8f3;
   line-height: 2rem;
 }
 
 .section .box-portfolio .portfolio-item .visit-site {
-  margin-left: auto;
+  margin: 20px;
 }
 
 .section .box-portfolio .portfolio-item .visit-site .visit-site-btn {
