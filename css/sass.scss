@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
+$body-clr: #3d3d3d;
+$header-bg: white;
+$header-shd: #b1aeae;
+$active-nav: #6B3074;
+$nav-hover: #797676;
+$hello-bg: #7268A6;
+$port-box: rgb(236, 232, 243);
+$visit-btn: #e7e7e7;
+$img5-border: rgb(240, 240, 240);
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    color: $body-clr;
+    font-family: 'Quicksand', sans-serif;
+}
+
+// Mobil
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 3rem;
+    z-index: 10;
+    width: 100%;
+    background-color: $header-bg;
+    opacity: 0.7;
+    box-shadow: 0px 3px 4px 0px $header-shd;
+
+    .mobil-nav {
+        margin-left: 1rem;
+
+        #bars-icon {
+            display: flex;
+            font-size: 2rem;
+        }
+
+        #cross-icon {
+            display: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    #nav {
+        display: none;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        list-style: none;
+        background: rgba(7, 7, 7, 0.5);
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+
+        li {
+
+            a {
+                color: $header-bg;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    z-index: 11;
+    margin: 5px;
+
+    a {
+        color: $body-clr;
+    }
+
+    i:hover {
+        cursor: pointer;
+    }
+
+    .fa-linkedin {
+        font-size: 27px;
+        opacity: 0.6;
+        padding: 7px;
+    }
+
+    .fa-github {
+        font-size: 25px;
+        opacity: 0.6;
+        padding: 7px;
+    }
+
+    .fa-envelope {
+        font-size: 24px;
+        opacity: 0.6;
+        padding: 7px;
+    }
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    border: 1px solid $img5-border;
+
+    #hello {
+        background-color: $hello-bg;
+        color: $header-bg;
+        border-radius: 9px 9px 9px 0;
+        width: 30%;
+        text-align: center;
+    }
+
+    .box-home,
+    .box-about {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        margin: 12% 0;
+
+        .box {
+            justify-self: center;
+            display: grid;
+            line-height: 1.5rem;
+
+            .home-img {
+                width: 100%;
+            }
+
+            .about-img {
+                justify-self: center;
+                width: 60%;
+                border-radius: 10pc;
+            }
+
+            #download {
+                border: 1px solid $header-shd;
+                color: $nav-hover;
+                padding: 10px;
+                border-radius: 3px;
+            }
+
+            #download:hover {
+                background-color: $visit-btn;
+                text-decoration: none;
+                color: $body-clr;
+            }
+
+        }
+
+    }
+
+    .portfolio-title {
+        text-align: center;
+        margin: 5%;
+    }
+
+    .box-portfolio {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+        .portfolio-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background-color: $port-box;
+            line-height: 2rem;
+
+            #visit-site {
+                margin-left: auto;
+
+                #visit-site-btn {
+                    border: 1px solid $header-shd;
+                    color: $nav-hover;
+                    padding: 10px;
+                    border-radius: 3px;
+                }
+
+                #visit-site-btn:hover {
+                    text-decoration: none;
+                    background-color: $header-bg;
+                    color: $body-clr;
+                }
+            }
+        }
+
+        .portfolio-img {
+            width: 100%;
+        }
+
+        #image5 {
+            border: 1px solid $img5-border;
+        }
+    }
+}
+
+#portfolio {
+    padding-bottom: 10rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .scrollTop {
+        font-size: 3em;
+        color: $body-clr;
+    }
+
+    .scrollTop:hover {
+        cursor: pointer;
+        color: $nav-hover;
+    }
+}
+
+// Laptop
+@media (min-width: 768px) {
+    header {
+        height: 7rem;
+        width: 100%;
+        justify-content: center;
+
+        .mobil-nav {
+            display: none;
+        }
+
+        #nav {
+            display: flex;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: unset;
+            background: unset;
+
+            .active {
+                border-bottom: 2px solid $active-nav;
+            }
+
+            li {
+                margin: 0 10px;
+
+                a {
+                    font-size: 18px;
+                    color: $body-clr;
+                }
+
+                a:hover {
+                    color: $nav-hover;
+                }
+            }
+        }
+    }
+
+    .contact {
+        flex-direction: column;
+        top: 45%;
+        right: unset;
+        margin: 10px;
+
+        i {
+            padding: 1rem 2rem;
+        }
+
+        i:hover {
+            opacity: 1;
+        }
+
+        .fa-linkedin {
+            font-size: 29px;
+        }
+
+        .fa-github {
+            font-size: 27px;
+        }
+
+        .fa-envelope {
+            font-size: 26px;
+        }
+    }
+
+    .section {
+        padding-top: 7rem;
+        padding-bottom: 10rem;
+        border: none;
+
+        .box-home,
+        .box-about {
+            grid-template-columns: 1fr 1fr;
+
+            .box {
+                line-height: 2rem;
+
+                .about-img {
+                    width: 50%;
+                }
+            }
+        }
+
+        .box-portfolio {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+}
